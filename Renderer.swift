@@ -21,7 +21,7 @@ class Renderer: NSObject, ObservableObject, MTKViewDelegate {
     }
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        // Обработайте изменение размера, если необходимо
+        // Size change if needed
     }
     
     func draw(in view: MTKView) {
@@ -29,13 +29,12 @@ class Renderer: NSObject, ObservableObject, MTKViewDelegate {
             return
         }
         
-        // В этом методе вы должны выполнить рисование треугольника
-        // Создайте буфер вершин, установите вершинные данные и т. д.
+        // Create vertex buffer 
         
         let commandBuffer = device.makeCommandQueue()?.makeCommandBuffer()
         let renderEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: descriptor)
         
-        // Установите состояние рендеринга, нарисуйте треугольник
+        // Set render state and draw test triangle
         
         renderEncoder?.endEncoding()
         commandBuffer?.present(drawable)
