@@ -19,5 +19,5 @@ vertex Vertex vertex_main(uint vertexID [[vertex_id]]) {
 }
 
 fragment half4 fragment_main() {
-    return half4(1.0, 0.0, 0.0, 1.0); // Красный цвет
+    return half4(1.0, 0.0, 0.0, 1.0); // red color
 }
