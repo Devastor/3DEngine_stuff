@@ -19,6 +19,6 @@ struct MetalView: NSViewRepresentable {
     }
 
     func updateNSView(_ nsView: MTKView, context: Context) {
-        // Реализуйте обновления, если необходимо
+        // Realize updates, if needed
     }
 }
